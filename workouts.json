@@ -1,17 +1,13 @@
-{
-    "workouts": [
-      {
-        "id": "string",
-        "userId": "string", 
-        "type": "string", 
-        "date": "datetime",
-        "duration": "integer", 
-        "distance": "float", 
-        "caloriesBurned": "float", 
-        "notes": "string", 
-        "createdAt": "datetime",
-        "updatedAt": "datetime"
-      }
-    ]
+[
+  {
+    "workout": "string", 
+    "muscleGroup": "Biceps, quads, forearms, etc.",
+    "date": "date",
+    "duration": "time or number of reps ex: 1 min or 50", 
+    "distance": "if applicable", 
+    "caloriesBurned": "any", 
+    "notes": "string"
   }
+
+]
   

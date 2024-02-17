@@ -28,6 +28,30 @@ const saveUser = (req, res, next) => {
     });
 };
 
+const saveWorkout = (req, res, next) => {
+    const validationRule = {
+        workout: "required|string",
+        muscleGroup: "required|string",
+        date: "string",
+        duration: "required|string",
+        distance: "string",
+        caloriesBurned: "required|string",
+        notes: "string"
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+        if (!status) {
+            res.status(412).send({
+                success: false,
+                message: 'Validation failed',
+                data: err
+            });
+        } else {
+            next();
+        }
+    });
+};
+
 module.exports = {
-    saveUser
+    saveUser,
+    saveWorkout
 };
