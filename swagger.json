@@ -39,7 +39,7 @@
     }
   },
   "paths": {
-    "/users/": {
+    "users/": {
       "get": {
         "description": "",
         "produces": [
@@ -92,7 +92,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "users/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -193,7 +193,7 @@
         }
       }
     },
-    "/workouts/": {
+    "workouts/": {
       "get": {
         "description": "",
         "responses": {
@@ -252,7 +252,7 @@
         }
       }
     },
-    "/workouts/{id}": {
+    "workouts/{id}": {
       "get": {
         "description": "",
         "parameters": [
