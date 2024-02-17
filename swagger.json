@@ -73,7 +73,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "$ref": "#/definitions/Profile"
+                  "example": "any"
                 }
               }
             }
@@ -82,6 +82,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "412": {
             "description": "Precondition Failed"
@@ -143,7 +146,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "$ref": "#/definitions/Profile"
+                  "example": "any"
                 }
               }
             }
@@ -215,25 +218,25 @@
               "type": "object",
               "properties": {
                 "workout": {
-                  "example": "push up"
+                  "example": "any"
                 },
                 "muscleGroup": {
-                  "example": "chest"
+                  "example": "any"
                 },
                 "date": {
-                  "example": "1/2/24"
+                  "example": "any"
                 },
                 "duration": {
-                  "example": "1 min or 50 reps"
+                  "example": "any"
                 },
                 "distance": {
-                  "example": "if applicable"
+                  "example": "any"
                 },
                 "caloriesBurned": {
-                  "example": "100"
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Did more than last week."
+                  "example": "any"
                 }
               }
             }
@@ -291,25 +294,25 @@
               "type": "object",
               "properties": {
                 "workout": {
-                  "example": "push up"
+                  "example": "any"
                 },
                 "muscleGroup": {
-                  "example": "chest"
+                  "example": "any"
                 },
                 "date": {
-                  "example": "1/2/24"
+                  "example": "any"
                 },
                 "duration": {
-                  "example": "1 min or 50 reps"
+                  "example": "any"
                 },
                 "distance": {
-                  "example": "if applicable"
+                  "example": "any"
                 },
                 "caloriesBurned": {
-                  "example": "100"
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Did more than last week."
+                  "example": "any"
                 }
               }
             }
