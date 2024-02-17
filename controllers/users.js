@@ -14,6 +14,9 @@ const getAll = async (req, res, next) => {
 
 // Get by ID
 const getSingle = async (req, res, next) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid user id to find a user.');
+  }
   const idString = req.params.id;
   console.log('Received id parameter:', idString);
 
@@ -74,6 +77,9 @@ const createUser = async (req, res, next) => {
 
 // Update user info
 const updateUser = async (req, res, next) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid user id to update a user.');
+  }
   const userId = new ObjectId(req.params.id);
   const newUserData = {
     username: req.body.username,
@@ -110,6 +116,9 @@ const updateUser = async (req, res, next) => {
 
 // Delete User
 const deleteUser = async (req, res, next) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid user id to update a user.');
+  }
   try {
     const userId = new ObjectId(req.params.id);
 
