@@ -57,17 +57,17 @@ Content-Type: application/json
 // Production Test 
 
 ### Get all contacts
-GET https://connect-mongodb.onrender.com/contacts
+GET https://fitness-tracker-q4c5.onrender.com/users/
 
 ### Get by ID
-GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e3
+GET https://fitness-tracker-q4c5.onrender.com/users/
 ###
-GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e2
+GET https://fitness-tracker-q4c5.onrender.com/users/
 ###
-GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e1
+GET https://fitness-tracker-q4c5.onrender.com/users/
 
 ### Create new contact
-POST https://connect-mongodb.onrender.com/contacts
+POST https://fitness-tracker-q4c5.onrender.com/users/
 Content-Type: application/json
 
 {
@@ -79,7 +79,7 @@ Content-Type: application/json
 }
 
 ### Update contact
-PUT https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e3
+PUT https://fitness-tracker-q4c5.onrender.com/users/
 Content-Type: application/json
 
 {
@@ -91,5 +91,5 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE https://connect-mongodb.onrender.com/contacts/65b333d226fc274459febfc3
+DELETE https://fitness-tracker-q4c5.onrender.com/users/
 Content-Type: application/json
