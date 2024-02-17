@@ -5,11 +5,39 @@
     "description": "This is my Fitness Tracker API",
     "version": "1.0.0"
   },
-  "host": "fitness-tracker.onrender.com",
+  "host": "localhost:8080", 
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
+  "definitions": {
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "example": "any"
+        },
+        "lastName": {
+          "example": "any"
+        },
+        "age": {
+          "example": "any"
+        },
+        "gender": {
+          "example": "Male or Female"
+        },
+        "height": {
+          "example": "in inches"
+        },
+        "weight": {
+          "example": "in lbs"
+        },
+        "goals": {
+          "example": "Lose weight etc."
+        }
+      }
+    }
+  },
   "paths": {
     "/users/": {
       "get": {
@@ -42,7 +70,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "example": "any"
+                  "$ref": "#/definitions/Profile"
                 }
               }
             }
@@ -106,7 +134,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "example": "any"
+                  "$ref": "#/definitions/Profile"
                 }
               }
             }

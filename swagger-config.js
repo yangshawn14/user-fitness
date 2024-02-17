@@ -1,10 +1,10 @@
 const doc = {
     info: {
-        title: 'Contacts API',
-        description: 'This is my Contacts API',
+        title: 'Fitness Tracker API',
+        description: 'This is my Fitness Tracker API',
         version: '1.0.0',
     },
-    host: 'connect-mongodb.onrender.com',
+    host: 'fitness-tracker-q4c5.onrender.com/',
     schemes: ['https'],
 };
 
