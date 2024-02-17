@@ -1,12 +1,12 @@
 [
   {
-    "workout": "string", 
-    "muscleGroup": "Biceps, quads, forearms, etc.",
-    "date": "date",
-    "duration": "time or number of reps ex: 1 min or 50", 
-    "distance": "if applicable", 
-    "caloriesBurned": "any", 
-    "notes": "string"
+    "workout": "push up", 
+    "muscleGroup": "Biceps, triceps, chest",
+    "date": "2/17/24",
+    "duration": "50 reps", 
+    "distance": "N/A", 
+    "caloriesBurned": "10", 
+    "notes": "Did better than last week."
   }
 
 ]
