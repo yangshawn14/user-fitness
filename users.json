@@ -1,18 +1,16 @@
-{
-  "users": [
-    {
-      "username": "string",
-      "email": "string",
-      "password": "string", 
-      "profile": {
-        "firstName": "string",
-        "lastName": "string",
-        "age": "integer",
-        "gender": "string",
-        "height": "float", 
-        "weight": "float", 
-        "goals": "string" 
-      }
+[
+  {
+    "username": "yangshawn14",
+    "email": "yangshawn14@gmail.com",
+    "password": "password", 
+    "profile": {
+      "firstName": "Shawn",
+      "lastName": "Yang",
+      "age": "26",
+      "gender": "Male",
+      "height": "63", 
+      "weight": "143", 
+      "goals": "Lose weight and jump higher." 
     }
-  ]
-}
+  }
+]

@@ -29,7 +29,7 @@ mongodb.initDb((err, mongodb) => {
     console.log(err);
   } else {
     app.listen(port, () => {
-      console.log(`Server running on http://localhost:${port}/contacts`);
+      console.log(`Server running on http://localhost:${port}/users`);
     });
   }
 });
