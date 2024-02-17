@@ -1,0 +1,17 @@
+{
+    "workouts": [
+      {
+        "id": "string",
+        "userId": "string", 
+        "type": "string", 
+        "date": "datetime",
+        "duration": "integer", 
+        "distance": "float", 
+        "caloriesBurned": "float", 
+        "notes": "string", 
+        "createdAt": "datetime",
+        "updatedAt": "datetime"
+      }
+    ]
+  }
+  

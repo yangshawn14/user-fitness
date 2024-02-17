@@ -1,0 +1,95 @@
+// Localhost Test
+
+### Get all contacts
+GET http://localhost:8080/users
+
+### Get by ID
+GET http://localhost:8080/users/
+###
+GET http://localhost:8080/users/
+###
+GET http://localhost:8080/users/
+###
+GET http://localhost:8080/users/
+
+### Create new contact
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+      "username": "nickyang00",
+      "email": "yangnick@gmail.com",
+      "password": "password123", 
+      "profile": {
+        "firstName": "Nick",
+        "lastName": "Yang",
+        "age": "23",
+        "gender": "Male",
+        "height": "65", 
+        "weight": "185", 
+        "goals": "Lose weight and gain strength." 
+      }
+}
+
+### Update contact
+PUT http://localhost:8080/users/65b315d155960690ee55e7b0
+Content-Type: application/json
+
+{
+      "username": "nickyang00",
+      "email": "yangnick@gmail.com",
+      "password": "password456", 
+      "profile": {
+        "firstName": "Nick",
+        "lastName": "Yang",
+        "age": "23",
+        "gender": "Male",
+        "height": "65", 
+        "weight": "185", 
+        "goals": "Gain weight and jump higher." 
+      }
+}
+
+### Delete contact
+DELETE http://localhost:8080/users/65b329573427cc822e5de37a
+Content-Type: application/json
+
+// Production Test 
+
+### Get all contacts
+GET https://connect-mongodb.onrender.com/contacts
+
+### Get by ID
+GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e3
+###
+GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e2
+###
+GET https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e1
+
+### Create new contact
+POST https://connect-mongodb.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Grace",
+    "lastName": "Yang",
+    "email": "graceyang@email.com",
+    "favoriteColor": "Purple",
+    "birthday": "12/27/07" 
+}
+
+### Update contact
+PUT https://connect-mongodb.onrender.com/contacts/65ac69f8c9928e61c47be0e3
+Content-Type: application/json
+
+{
+    "firstName": "Troy",
+    "lastName": "Yang",
+    "email": "troyyang@email.com",
+    "favoriteColor": "Orange",
+    "birthday": "12/13/23" 
+}
+
+### Delete contact
+DELETE https://connect-mongodb.onrender.com/contacts/65b333d226fc274459febfc3
+Content-Type: application/json
