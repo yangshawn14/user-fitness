@@ -73,7 +73,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "example": "any"
+                  "$ref": "#/definitions/Profile"
                 }
               }
             }
@@ -146,7 +146,7 @@
                   "example": "any"
                 },
                 "profile": {
-                  "example": "any"
+                  "$ref": "#/definitions/Profile"
                 }
               }
             }
