@@ -8,11 +8,11 @@ const saveUser = (req, res, next) => {
         profile: {
             firstName: "required|string",
             lastName: "required|string",
-            age: "required|integer",
+            age: "required|string",
             gender: "required|string",
-            height: "required|float",
-            weight: "required|float",
-            goals: "required|string"
+            height: "required|string",
+            weight: "required|string",
+            goals: "string"
         }
     };
     validator(req.body, validationRule, {}, (err, status) => {

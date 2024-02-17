@@ -3,13 +3,14 @@ const ObjectId = require('mongodb').ObjectId;
 
 // Get all users
 const getAll = async (req, res, next) => {
-  mongodb.getDb().db().collection('users').find().toArray((lists) => {
-    if (err) {
-      res.status(400).json({ message: err });
-    }
+  try {
+    const lists = await mongodb.getDb().db().collection('users').find().toArray();
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
-  });
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 };
 
 // Get by ID
