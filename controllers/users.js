@@ -1,5 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+const passwordUtil = require('../middleware/passwordCheck');
+
 
 // Get all users
 const getAll = async (req, res, next) => {
@@ -45,6 +47,12 @@ const createUser = async (req, res, next) => {
   try {
     // Extract user data from the request body
     const { username, email, password, profile } = req.body;
+
+    // Validate password
+    const passwordCheck = passwordUtil.passwordPass(password);
+    if (passwordCheck.error) {
+      return res.status(400).json({ message: passwordCheck.error });
+    }
 
     // Insert the new user into the MongoDB collection
     const result = await mongodb.getDb().db().collection('users').insertOne({
