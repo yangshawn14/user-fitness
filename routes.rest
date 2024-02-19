@@ -1,6 +1,6 @@
 // Localhost Test
 
-### Get all contacts
+### Get all users
 GET http://localhost:8080/users
 
 ### Get by ID
@@ -12,7 +12,7 @@ GET http://localhost:8080/users/
 ###
 GET http://localhost:8080/users/
 
-### Create new contact
+### Create new user
 POST http://localhost:8080/users
 Content-Type: application/json
 
@@ -31,7 +31,7 @@ Content-Type: application/json
     }
 }
 
-### Update contact
+### Update user
 PUT http://localhost:8080/users/65b315d155960690ee55e7b0
 Content-Type: application/json
 
@@ -50,13 +50,15 @@ Content-Type: application/json
       }
 }
 
-### Delete contact
+### Delete user
 DELETE http://localhost:8080/users/65b329573427cc822e5de37a
 Content-Type: application/json
 
-// Production Test 
 
-### Get all contacts
+// PRODUCTION TEST 
+
+// USERS COLLECTION
+### Get all users
 GET https://fitness-tracker-q4c5.onrender.com/users/
 
 ### Get by ID
@@ -66,7 +68,7 @@ GET https://fitness-tracker-q4c5.onrender.com/users/65d01a9d9181e77b3ef5ad37
 ###
 GET https://fitness-tracker-q4c5.onrender.com/users/65d01b169181e77b3ef5ad38
 
-### Create new contact
+### Create new user
 POST https://fitness-tracker-q4c5.onrender.com/users/
 Content-Type: application/json
 
@@ -85,7 +87,7 @@ Content-Type: application/json
       }
 }
 
-### Update contact
+### Update user
 PUT https://fitness-tracker-q4c5.onrender.com/users/65d04bc57d7c4d86bc2427fa
 Content-Type: application/json
 
@@ -104,6 +106,50 @@ Content-Type: application/json
       }
 }
 
-### Delete contact
+### Delete user
 DELETE https://fitness-tracker-q4c5.onrender.com/users/65d04bc57d7c4d86bc2427fa
+Content-Type: application/json
+
+// WORKOUTS COLLECTION
+### Get all workouts
+GET https://fitness-tracker-q4c5.onrender.com/workouts/
+
+### Get by ID
+GET https://fitness-tracker-q4c5.onrender.com/workouts/65d106153b2f951cf071377e
+
+### Create new workout
+POST https://fitness-tracker-q4c5.onrender.com/workouts/
+Content-Type: application/json
+
+{
+    "username": "nickyang00",
+      "email": "yangnick@gmail.com",
+      "password": "password123", 
+      "profile": {
+        "firstName": "Nick",
+        "lastName": "Yang",
+        "age": "23",
+        "gender": "Male",
+        "height": "65", 
+        "weight": "185", 
+        "goals": "Lose weight and gain strength." 
+      }
+}
+
+### Update workout
+PUT https://fitness-tracker-q4c5.onrender.com/users/65d106153b2f951cf071377e
+Content-Type: application/json
+
+{
+    "workout": "push up", 
+    "muscleGroup": "Biceps, triceps, chest",
+    "date": "2/17/24",
+    "duration": "50 reps", 
+    "distance": "N/A", 
+    "caloriesBurned": "10", 
+    "notes": "Did better than last week."
+}
+
+### Delete workout
+DELETE https://fitness-tracker-q4c5.onrender.com/users/65d106153b2f951cf071377e
 Content-Type: application/json
