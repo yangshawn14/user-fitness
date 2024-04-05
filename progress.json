@@ -1,0 +1,11 @@
+[
+    {
+        "date": "2024-01-25",
+        "weight": 150,
+        "waist_circumference(inches)": 32,
+        "body_fat_percentage": 15,
+        "fitness_goal": "Lose 5 pounds",
+        "achievements": ["Ran 5k in under 30 minutes"]
+      }
+      
+]

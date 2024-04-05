@@ -1,0 +1,13 @@
+[
+    {
+        "food_item": "Chicken Breast",
+        "quantity": "6 oz",
+        "calories": 231,
+        "protein": 46,
+        "carbohydrates": 0,
+        "fats": 3,
+        "meal_time": "2024-01-25T12:30:00Z",
+        "notes": "Grilled with olive oil and herbs"
+      }
+      
+]
