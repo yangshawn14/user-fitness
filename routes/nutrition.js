@@ -8,9 +8,9 @@ router.get('/', nutritionController.getAllNutrition);
 
 router.get('/:id', nutritionController.getSingleNutrition);
 
-router.post('/', validation.saveWorkout, nutritionController.createNutrition);
+router.post('/', validation.saveNutrition, nutritionController.createNutrition);
 
-router.put('/:id', validation.saveWorkout, nutritionController.updateNutrition);
+router.put('/:id', validation.saveNutrition, nutritionController.updateNutrition);
 
 router.delete('/:id', nutritionController.deleteNutrition);
 
