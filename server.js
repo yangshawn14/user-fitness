@@ -50,7 +50,7 @@ app.get('/oauth-callback', ({ query: { code } }, res) => {
     .then((_res) => _res.data.access_token)
     .then((token) => {
       console.log('My token:', token);
-      res.redirect(`/?token=${token}`);
+      res.redirect(`/fitness-api?token=${token}`);
     })
     .catch((err) => res.status(500).json({ err: err.message }));
 });
