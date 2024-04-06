@@ -153,3 +153,78 @@ Content-Type: application/json
 ### Delete workout
 DELETE https://fitness-tracker-q4c5.onrender.com/users/65d106153b2f951cf071377e
 Content-Type: application/json
+
+// NUTRITION COLLECTION
+### Get all nutrition entries
+GET https://fitness-tracker-q4c5.onrender.com/nutrition/
+
+### Get nutrition entry by ID
+GET https://fitness-tracker-q4c5.onrender.com/nutrition/661084f4c8f8d6307750ed7c
+
+### Create new nutrition entry
+POST https://fitness-tracker-q4c5.onrender.com/nutrition/
+Content-Type: application/json
+
+{
+    "food_item": "Chicken Breast",
+    "quantity": "6 oz",
+    "calories": 231,
+    "protein": 46,
+    "carbohydrates": 0,
+    "fats": 3,
+    "meal_time": "2024-01-25T12:30:00Z",
+    "notes": "Grilled with olive oil and herbs"
+    }
+
+    ### Update nutrition entry
+    PUT https://fitness-tracker-q4c5.onrender.com/nutrition/661084f4c8f8d6307750ed7c
+    Content-Type: application/json
+
+    {
+    "food_item": "Salmon",
+    "quantity": "8 oz",
+    "calories": 367,
+    "protein": 42,
+    "carbohydrates": 0,
+    "fats": 20,
+    "meal_time": "2024-01-26T13:00:00Z",
+    "notes": "Pan-seared with lemon and dill"
+    }
+
+    ### Delete nutrition entry
+    DELETE https://fitness-tracker-q4c5.onrender.com/nutrition/661084f4c8f8d6307750ed7c
+
+    // PROGRESS COLLECTION
+    ### Get all progress entries
+    GET https://fitness-tracker-q4c5.onrender.com/progress/
+
+### Get progress entry by ID
+GET https://fitness-tracker-q4c5.onrender.com/progress/66108502c8f8d6307750ed7d
+
+### Create new progress entry
+POST https://fitness-tracker-q4c5.onrender.com/progress/
+Content-Type: application/json
+
+{
+    "date": "2024-01-25",
+    "weight": 150,
+    "waist_circumference(inches)": 32,
+    "body_fat_percentage": 15,
+    "fitness_goal": "Lose 5 pounds",
+    "achievements": ["Ran 5k in under 30 minutes"]
+    }
+
+    ### Update progress entry
+    PUT https://fitness-tracker-q4c5.onrender.com/progress/66108502c8f8d6307750ed7d
+Content-Type: application/json
+
+{
+    "weight": 148,
+    "waist_circumference(inches)": 31,
+    "body_fat_percentage": 14,
+    "fitness_goal": "Maintain weight and increase muscle mass",
+    "achievements": ["Increased bench press by 10 lbs"]
+}
+
+### Delete progress entry
+DELETE https://fitness-tracker-q4c5.onrender.com/progress/66108502c8f8d6307750ed7d
