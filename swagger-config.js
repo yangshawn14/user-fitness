@@ -4,7 +4,7 @@ const doc = {
         description: 'This is my User Fitness API',
         version: '1.0.0',
     },
-    host: 'fitness-tracker-q4c5.onrender.com/',
+    host: 'user-fitness.onrender.com/',
     schemes: ['https'],
 };
 
