@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Fitness Tracker API",
-    "description": "This is my Fitness Tracker API",
+    "description": "This is my User Fitness API",
     "version": "1.0.0"
   },
   "host": "fitness-tracker-q4c5.onrender.com/",
@@ -39,7 +39,7 @@
     }
   },
   "paths": {
-    "users/": {
+    "/users/": {
       "get": {
         "description": "",
         "produces": [
@@ -83,6 +83,9 @@
           "201": {
             "description": "Created"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "412": {
             "description": "Precondition Failed"
           },
@@ -92,7 +95,7 @@
         }
       }
     },
-    "users/{id}": {
+    "/users/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -193,7 +196,7 @@
         }
       }
     },
-    "workouts/": {
+    "/workouts/": {
       "get": {
         "description": "",
         "responses": {
@@ -215,25 +218,25 @@
               "type": "object",
               "properties": {
                 "workout": {
-                  "example": "push up"
+                  "example": "any"
                 },
                 "muscleGroup": {
-                  "example": "chest"
+                  "example": "any"
                 },
                 "date": {
-                  "example": "1/2/24"
+                  "example": "any"
                 },
                 "duration": {
-                  "example": "1 min or 50 reps"
+                  "example": "any"
                 },
                 "distance": {
-                  "example": "if applicable"
+                  "example": "any"
                 },
                 "caloriesBurned": {
-                  "example": "100"
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Did more than last week."
+                  "example": "any"
                 }
               }
             }
@@ -252,7 +255,7 @@
         }
       }
     },
-    "workouts/{id}": {
+    "/workouts/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -291,25 +294,345 @@
               "type": "object",
               "properties": {
                 "workout": {
-                  "example": "push up"
+                  "example": "any"
                 },
                 "muscleGroup": {
-                  "example": "chest"
+                  "example": "any"
                 },
                 "date": {
-                  "example": "1/2/24"
+                  "example": "any"
                 },
                 "duration": {
-                  "example": "1 min or 50 reps"
+                  "example": "any"
                 },
                 "distance": {
-                  "example": "if applicable"
+                  "example": "any"
                 },
                 "caloriesBurned": {
-                  "example": "100"
+                  "example": "any"
                 },
                 "notes": {
-                  "example": "Did more than last week."
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "nutrition/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "food_item": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                },
+                "calories": {
+                  "example": "any"
+                },
+                "protein": {
+                  "example": "any"
+                },
+                "carbohydrates": {
+                  "example": "any"
+                },
+                "fats": {
+                  "example": "any"
+                },
+                "meal_time": {
+                  "example": "any"
+                },
+                "notes": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "nutrition/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "food_item": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                },
+                "calories": {
+                  "example": "any"
+                },
+                "protein": {
+                  "example": "any"
+                },
+                "carbohydrates": {
+                  "example": "any"
+                },
+                "fats": {
+                  "example": "any"
+                },
+                "meal_time": {
+                  "example": "any"
+                },
+                "notes": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "progress/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "waist_circumference": {
+                  "example": "any"
+                },
+                "body_fat_percentage": {
+                  "example": "any"
+                },
+                "fitness_goal": {
+                  "example": "any"
+                },
+                "achievements": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "progress/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "waist_circumference": {
+                  "example": "any"
+                },
+                "body_fat_percentage": {
+                  "example": "any"
+                },
+                "fitness_goal": {
+                  "example": "any"
+                },
+                "achievements": {
+                  "example": "any"
                 }
               }
             }

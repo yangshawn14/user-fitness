@@ -67,7 +67,7 @@ mongodb.initDb((err, mongodb) => {
     console.log(err);
   } else {
     app.listen(port, () => {
-      console.log(`Server running on http://localhost:${port}/users`);
+      console.log(`Server running on http://localhost:${port}/fitness-api`);
     });
   }
 });
